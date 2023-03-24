@@ -1,0 +1,14 @@
+.login_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.6;
+    background-image: url('shared/assets/backgrounds/loginBackground.png');
+    filter: blur(10px);
+    -webkit-filter: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

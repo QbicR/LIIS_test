@@ -1,0 +1,34 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    color: #424242;
+    font-weight: 300;
+    font-size: 16px;
+    height: 19px;
+}
+
+.input_area {
+    padding: 16px;
+    margin: 7px 0;
+    height: 50px;
+    background: #ffffff;
+    border: 1px solid #c9cacc;
+    color: #424242;
+    border-radius: 4px;
+    font-weight: 300;
+    font-size: 16px;
+    outline: none;
+}
+
+.error {
+    font-weight: 300;
+    font-size: 12px;
+    height: 14px;
+    color: #eb1717;
+}
