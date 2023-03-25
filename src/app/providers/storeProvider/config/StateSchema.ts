@@ -1,7 +1,9 @@
-import { LoginType } from 'features/UserAuth/model/types/LoginType'
-import { UserType } from 'entities/User/model/types/userType'
+import { UserType } from 'entities/User'
+import { LoginType } from 'features/UserAuth'
+import { HotelsType } from 'features/getHotelsData'
 
 export interface StateSchema {
     userData: UserType
     loginData: LoginType
+    hotelsData: HotelsType
 }

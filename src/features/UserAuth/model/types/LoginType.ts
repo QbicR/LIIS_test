@@ -1,5 +1,11 @@
+export type ValidateErrors = {
+    email?: string
+    password?: string
+}
+
 export type LoginType = {
-    username: string
+    email: string
     password: string
     error: string
+    validateErrors: ValidateErrors
 }
