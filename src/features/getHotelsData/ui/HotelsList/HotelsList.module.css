@@ -7,82 +7,62 @@
     border-radius: 16px;
 }
 
-.hotel_item {
+.title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 16px 16px 0px;
-    /* background: red; */
-    width: 100%;
-    height: 99px;
-    border-bottom: 1px solid rgba(135, 135, 135, 0.2);
 }
 
-.info_area {
+.hotel {
     display: flex;
     align-items: center;
 }
 
-.hotel_icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 64px;
-    width: 64px;
-    background: rgba(65, 82, 46, 0.05);
-    border-radius: 50%;
-    margin-right: 24px;
+.arrow {
+    margin: 0 20px;
 }
 
-.hotel_info {
-    display: flex;
-    flex-direction: column;
-}
-
-.hotel_name {
-    font-weight: 300;
-    line-height: 22px;
-    font-size: 17px;
+.city {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
     color: #424242;
 }
 
-.hotel_date {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.date {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #878787;
+    font-size: 24px;
+    line-height: 28px;
+    color: #41522e;
 }
 
-.dash {
-    width: 9px;
-    height: 1px;
-    background: #878787;
-}
-
-.price_area {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    height: 100%;
-    justify-content: space-between;
-}
-
-.hotel_fav_icon {
-    cursor: pointer;
-}
-
-.hotel_price {
-    font-weight: 400;
-    font-size: 17px;
-    color: #424242;
-}
-
-.hotel_price span {
+.favorites {
     font-weight: 300;
-    font-size: 11px;
-    color: #878787;
-    margin-right: 10px;
+    font-size: 17px;
+    line-height: 22px;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+.favorites span {
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.hotels {
+    overflow-y: auto;
+    height: calc(521px - 92px);
+}
+
+.hotels::-webkit-scrollbar {
+    width: 2px;
+}
+
+.hotels::-webkit-scrollbar-track {
+    background: #e7e7e7;
+}
+
+.hotels::-webkit-scrollbar-thumb {
+    background: #41522e;
+    border-radius: 2px;
 }

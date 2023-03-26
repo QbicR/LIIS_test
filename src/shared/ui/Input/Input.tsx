@@ -5,7 +5,7 @@ interface Props {
     onChange?: (value: string) => void
     inputName?: string
     inputError?: string
-    type?: 'text' | 'password' | 'date'
+    type?: 'text' | 'password' | 'date' | 'number'
     value?: string | number
     defaultValue?: string
 }

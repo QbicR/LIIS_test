@@ -36,15 +36,15 @@ export const LoginForm = () => {
 
     const isValid = validateErrors.email === '' && validateErrors.password === ''
 
-    useEffect(() => {
-        validate()
-    }, [email, password, validate])
-
     const onLogIn = () => {
         if (isValid) {
             dispatch(logIn(email, password))
         }
     }
+
+    useEffect(() => {
+        validate()
+    }, [email, password, validate])
 
     if (error) {
         alert(error)
@@ -54,14 +54,17 @@ export const LoginForm = () => {
         <div className={styles.login_form}>
             <h3 className={styles.header}>Simple Hotel Check</h3>
             <Input
+                value={email}
                 onChange={onChangeUsername}
                 inputName={'Email'}
                 inputError={validateErrors.email}
             />
             <Input
+                value={password}
                 onChange={onChangePassword}
                 inputName={'Пароль'}
                 inputError={validateErrors.password}
+                type={'password'}
             />
             <Button onClick={onLogIn} children={'Войти'} />
         </div>

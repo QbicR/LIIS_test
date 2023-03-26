@@ -1,0 +1,20 @@
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    margin: 28px 0;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.image {
+    min-width: 169px;
+    height: 149px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

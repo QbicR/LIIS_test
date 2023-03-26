@@ -1,4 +1,5 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit'
+import { sliderReducer } from 'entities/Slider'
 
 import { userReducer } from 'entities/User'
 import { hotelsReducer } from 'features/getHotelsData'
@@ -10,6 +11,7 @@ export function createReduxStore(initialState?: StateSchema) {
         userData: userReducer,
         loginData: loginReducer,
         hotelsData: hotelsReducer,
+        imagesData: sliderReducer,
     }
 
     return configureStore<StateSchema>({
