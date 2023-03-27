@@ -16,7 +16,7 @@ export const getHotelsData = createAsyncThunk<HotelType[], Props>(
 
         try {
             const response: HotelType[] = await fetch(
-                `http://engine.hotellook.com/api/v2/cache.json?location=${location}&currency=rub&checkIn=${date}&checkOut=${newDate}&limit=20`,
+                `https://engine.hotellook.com/api/v2/cache.json?location=${location}&currency=rub&checkIn=${date}&checkOut=${newDate}&limit=20`,
                 { method: 'GET' },
             ).then((res) => res.json())
 
