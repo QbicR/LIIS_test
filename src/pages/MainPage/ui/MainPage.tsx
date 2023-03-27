@@ -1,15 +1,7 @@
-import React from 'react'
-import styles from './MainPage.module.css'
-
-import { HotelsForm, HotelsList } from 'features/getHotelsData'
+import { Hotels } from 'widgets/Hotels'
 
 const MainPage = () => {
-    return (
-        <div className={styles.main_page}>
-            <HotelsForm />
-            <HotelsList />
-        </div>
-    )
+    return <Hotels />
 }
 
 export default MainPage

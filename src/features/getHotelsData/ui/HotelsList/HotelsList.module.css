@@ -1,6 +1,6 @@
 .hotels_list {
     width: 664px;
-    height: calc(902px - 92px);
+    height: 906px;
     padding: 48px 32px;
     background: #ffffff;
     box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
@@ -51,7 +51,7 @@
 
 .hotels {
     overflow-y: auto;
-    height: calc(521px - 92px);
+    height: 525px;
 }
 
 .hotels::-webkit-scrollbar {

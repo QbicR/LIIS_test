@@ -1,6 +1,7 @@
-import { UserType } from './../types/userType'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { USER_AUTH_DATA } from 'shared/const/localStorage'
+
+import { UserType } from './../types/userType'
+import { FAVORITE_HOTELS, USER_AUTH_DATA } from 'shared/const/localStorage'
 
 const initialState: UserType = {
     user: '',
@@ -23,6 +24,7 @@ export const userSlice = createSlice({
         logOut: (state) => {
             state.user = ''
             localStorage.removeItem(USER_AUTH_DATA)
+            localStorage.removeItem(FAVORITE_HOTELS)
         },
     },
 })

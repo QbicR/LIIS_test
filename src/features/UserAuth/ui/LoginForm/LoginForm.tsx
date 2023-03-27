@@ -56,7 +56,7 @@ export const LoginForm = () => {
             <Input
                 value={email}
                 onChange={onChangeUsername}
-                inputName={'Email'}
+                inputName={'Логин'}
                 inputError={validateErrors.email}
             />
             <Input

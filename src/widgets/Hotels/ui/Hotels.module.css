@@ -1,0 +1,14 @@
+.hotels {
+    background: #f4f4f4;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.left_bar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

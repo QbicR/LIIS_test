@@ -5,9 +5,10 @@ import { getHotelsState } from '../../model/selectors/getHotelsState'
 import { HotelItem } from '../HotelItem/HotelItem'
 import { Slider } from 'entities/Slider'
 import { Loader } from 'shared/ui/Loader/Loader'
+import { declensionOfNumerals } from 'shared/lib/functions/declensionOfNumerals/declensionOfNumerals'
 
 export const HotelsList = () => {
-    const { hotels, isLoading, requestData } = useSelector(getHotelsState)
+    const { hotels, isLoading, requestData, favoriteHotels } = useSelector(getHotelsState)
 
     return (
         <div className={styles.hotels_list}>
@@ -36,7 +37,8 @@ export const HotelsList = () => {
             </div>
             <Slider />
             <div className={styles.favorites}>
-                Добавлено в Избранное:<span>3</span> отеля
+                Добавлено в Избранное:<span>{favoriteHotels.length}</span>{' '}
+                {declensionOfNumerals(favoriteHotels.length, ['отель', 'отеля', 'отелей'])}
             </div>
             {isLoading ? (
                 <Loader />
@@ -48,6 +50,7 @@ export const HotelsList = () => {
                             hotel={hotel}
                             date={requestData.date}
                             days={requestData.days}
+                            favoriteHotels={favoriteHotels}
                         />
                     ))}
                 </div>

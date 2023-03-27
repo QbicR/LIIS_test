@@ -1,0 +1,19 @@
+.sorter {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #41522e;
+    border-radius: 4px;
+    padding: 4px 8px;
+    height: 28px;
+    width: max-content;
+    gap: 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #41522e;
+}

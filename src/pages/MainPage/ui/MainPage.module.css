@@ -1,8 +1,2 @@
 .main_page {
-    background: #f4f4f4;
-    width: 100%;
-    height: calc(100vh - 92px);
-    display: flex;
-    justify-content: center;
-    gap: 24px;
 }

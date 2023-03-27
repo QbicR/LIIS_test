@@ -11,6 +11,15 @@ export type RequestDataType = {
     days: string
 }
 
+export type FavoriteHotelType = {
+    hotelName: string
+    date: string
+    days: string
+    priceAvg: number
+    hotelId: number
+    stars: number
+}
+
 export type HotelsType = {
     location: string
     date: string
@@ -19,4 +28,5 @@ export type HotelsType = {
     isLoading: boolean
     error: string
     requestData: RequestDataType
+    favoriteHotels: FavoriteHotelType[]
 }

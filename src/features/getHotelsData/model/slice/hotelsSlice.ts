@@ -1,16 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import { getHotelsData } from '../services/getHotelsData'
-import { HotelsType, RequestDataType } from '../types/HotelsType'
+import { FavoriteHotelType, HotelsType, RequestDataType } from '../types/HotelsType'
+import { FAVORITE_HOTELS } from 'shared/const/localStorage'
 
 const initialState: HotelsType = {
     location: 'Москва',
-    date: new Date().toISOString().slice(0, 10),
+    date: new Date().toLocaleDateString().split('.').reverse().join('-'),
     days: '1',
     hotels: [],
     isLoading: false,
     error: '',
     requestData: { location: '', date: '', days: '' },
+    favoriteHotels: [],
 }
 
 export const hotelsSlice = createSlice({
@@ -28,6 +30,25 @@ export const hotelsSlice = createSlice({
         },
         setRequestData: (state, action: PayloadAction<RequestDataType>) => {
             state.requestData = action.payload
+        },
+        setFavoriteHotel: (state, action: PayloadAction<FavoriteHotelType>) => {
+            state.favoriteHotels.push(action.payload)
+            localStorage.setItem(FAVORITE_HOTELS, JSON.stringify(state.favoriteHotels))
+        },
+        initFavoriteHotels: (state) => {
+            const hotels = JSON.parse(localStorage.getItem(FAVORITE_HOTELS))
+            if (hotels) {
+                state.favoriteHotels = hotels
+            }
+        },
+        deleteFavoriteHotel: (state, action: PayloadAction<number>) => {
+            state.favoriteHotels = state.favoriteHotels.filter(
+                (favHotel) => favHotel.hotelId !== action.payload,
+            )
+            localStorage.setItem(FAVORITE_HOTELS, JSON.stringify(state.favoriteHotels))
+        },
+        clearFavoriteHotel: (state) => {
+            state.favoriteHotels = []
         },
     },
     extraReducers: (builder) => {
