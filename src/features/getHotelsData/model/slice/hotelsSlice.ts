@@ -58,8 +58,11 @@ export const hotelsSlice = createSlice({
         })
         builder.addCase(getHotelsData.fulfilled, (state, action: any) => {
             if (action.payload.errorCode === 2) {
-                alert('Город не найден.')
-                state.error = 'Город не найден.'
+                alert('Введены некоректные данные.')
+                state.error = 'Введены некоректные данные.'
+            } else if (action.payload.length === 0) {
+                alert('Введены некоректные данные.')
+                state.error = 'Введены некоректные данные.'
             } else {
                 state.isLoading = false
                 state.hotels = action.payload
