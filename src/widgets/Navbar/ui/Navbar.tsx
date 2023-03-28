@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom'
 
 import styles from './Navbar.module.css'
 import { userAction } from 'entities/User'
+import { hotelsActions } from 'features/getHotelsData'
 import { RoutePath } from 'shared/config/routerConfig/RouterConfig'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { hotelsActions } from 'features/getHotelsData'
 
 export const Navbar = memo(() => {
     const dispatch = useAppDispatch()

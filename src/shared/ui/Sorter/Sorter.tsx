@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useCallback, useState } from 'react'
 
 import styles from './Sorter.module.css'
 
@@ -11,10 +11,10 @@ export const Sorter: React.FC<Props> = memo((props) => {
     const { childer, onClick } = props
     const [type, setType] = useState<boolean>(true)
 
-    const changeType = () => {
+    const changeType = useCallback(() => {
         onClick(type)
         setType(!type)
-    }
+    }, [type, onClick])
 
     return (
         <div onClick={changeType} className={styles.sorter}>

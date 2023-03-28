@@ -1,9 +1,9 @@
 import { useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
+import styles from './LoginForm.module.css'
 import { getLoginState } from '../../model/selectors/getLoginState'
 import { logIn, loginActions } from '../../model/slice/loginSlice'
-import styles from './LoginForm.module.css'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Button } from 'shared/ui/Button/Button'
 import { Input } from 'shared/ui/Input/Input'

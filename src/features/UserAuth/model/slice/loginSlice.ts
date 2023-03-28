@@ -1,5 +1,6 @@
-import { LoginType, ValidateErrors } from './../types/LoginType'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+
+import { LoginType, ValidateErrors } from './../types/LoginType'
 import { userAction } from 'entities/User'
 
 const initialState: LoginType = {

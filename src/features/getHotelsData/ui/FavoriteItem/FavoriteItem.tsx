@@ -2,8 +2,8 @@ import React, { memo, useCallback } from 'react'
 
 import styles from './FavoriteItem.module.css'
 import { FavoriteHotelType } from '../../model/types/HotelsType'
-import { declensionOfNumerals } from 'shared/lib/functions/declensionOfNumerals/declensionOfNumerals'
 import { hotelsActions } from '../../model/slice/hotelsSlice'
+import { declensionOfNumerals } from 'shared/lib/functions/declensionOfNumerals/declensionOfNumerals'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 interface Props {

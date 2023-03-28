@@ -27,7 +27,7 @@ export const HotelItem: React.FC<Props> = memo((props) => {
                 setFavorite(true)
             }
         })
-    }, [favoriteHotels])
+    }, [favoriteHotels, hotelId])
 
     const favHotel = {
         hotelName,
